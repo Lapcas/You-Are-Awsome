@@ -15,26 +15,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVN-2H-cov">
-                                <rect key="frame" x="16" y="20" width="288" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                <color key="textColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GX6-JZ-GwT">
-                                <rect key="frame" x="16" y="128" width="104" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GX6-JZ-GwT">
+                                <rect key="frame" x="108" y="128" width="104" height="30"/>
                                 <state key="normal" title="Show Message"/>
                                 <connections>
                                     <action selector="messageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Kz-0d-0vb"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9YO-nf-rCG">
+                                <rect key="frame" x="16" y="166" width="288" height="382"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVN-2H-cov">
+                                <rect key="frame" x="16" y="20" width="288" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="75U-lj-CcJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mVN-2H-cov" secondAttribute="trailing" constant="16" id="9R0-zm-DKU"/>
+                            <constraint firstItem="9YO-nf-rCG" firstAttribute="top" secondItem="GX6-JZ-GwT" secondAttribute="bottom" constant="8" id="DXU-Og-JmI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GX6-JZ-GwT" secondAttribute="trailing" constant="108" id="JXG-tS-ZDI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9YO-nf-rCG" secondAttribute="trailing" constant="16" id="P6N-Dn-uhd"/>
+                            <constraint firstItem="GX6-JZ-GwT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PBL-US-J1x"/>
+                            <constraint firstItem="9YO-nf-rCG" firstAttribute="top" secondItem="GX6-JZ-GwT" secondAttribute="bottom" constant="8" id="WHX-SY-MKz"/>
+                            <constraint firstItem="GX6-JZ-GwT" firstAttribute="top" secondItem="mVN-2H-cov" secondAttribute="bottom" constant="8" id="WZ9-07-qK3"/>
+                            <constraint firstItem="mVN-2H-cov" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="bs7-TN-JlV"/>
+                            <constraint firstItem="9YO-nf-rCG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ecj-Uv-w1l"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9YO-nf-rCG" secondAttribute="bottom" constant="20" id="kRQ-pB-MUj"/>
+                            <constraint firstItem="GX6-JZ-GwT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="108" id="ubW-Zb-Q3F"/>
+                            <constraint firstItem="mVN-2H-cov" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="zKf-oW-yDd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="9YO-nf-rCG" id="y5v-ps-IGv"/>
                         <outlet property="messageLabel" destination="mVN-2H-cov" id="9UV-r5-idC"/>
                         <outlet property="messageView" destination="8bC-Xf-vdC" id="Eja-Th-8jx"/>
                     </connections>
